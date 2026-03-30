@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 import Carousel from './components/Carousel';
 
-export interface State {
+interface State {
   images: string[];
   step: number;
   frameSize: number;

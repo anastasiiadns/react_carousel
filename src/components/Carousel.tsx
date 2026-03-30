@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
 import './Carousel.scss';
-import { State } from '../App';
 
-export const Carousel: React.FC<State> = ({
+interface CarouselProps {
+  images: string[];
+  step?: number;
+  frameSize?: number;
+  itemWidth?: number;
+  animationDuration?: number;
+  infinite?: boolean;
+}
+
+export const Carousel: React.FC<CarouselProps> = ({
   images,
-  step,
-  frameSize,
-  itemWidth,
-  animationDuration,
-  infinite,
+  step = 3,
+  frameSize = 3,
+  itemWidth = 130,
+  animationDuration = 1000,
+  infinite = false,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const maxIndex = images.length - frameSize;
