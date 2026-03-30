@@ -5,8 +5,8 @@ import Carousel from './components/Carousel';
 export interface State {
   images: string[];
   step: number;
-  frameSize: number; //к-сть картинок, які видно
-  itemWidth: number; //ширина однієї картинки
+  frameSize: number;
+  itemWidth: number;
   animationDuration: number;
   infinite: boolean;
 }

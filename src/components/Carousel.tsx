@@ -10,8 +10,8 @@ export const Carousel: React.FC<State> = ({
   animationDuration,
   infinite,
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0); // де зараз знаходиться карусель
-  const maxIndex = images.length - frameSize; // докуди максимум можна дійти
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const maxIndex = images.length - frameSize;
 
   const nextButton = () => {
     if (infinite) {
